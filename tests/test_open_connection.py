@@ -4,7 +4,6 @@ import time
 import lackey
 
 def test_open_connection():
-	time.sleep(600)
 	lackey.App.focus("Red Expert")
 	lackey.click("files/images/init_db_browser.png")
 	lackey.click("files/images/bt_new_conn.png")
