@@ -4,24 +4,17 @@ import time
 
 @pytest.fixture()
 def open_connection():
+    #actions befor test:
     lackey.App.focus("Red Expert")
-    lackey.doubleClick("files/images/tree_name_of_conn_blue.png")
-    while lackey.exists("files/images/tree_name_of_open_conn.png") == None:
-        print(lackey.exists("files/images/tree_name_of_open_conn.png"))
-        time.sleep(1)
+    if lackey.exists("files/images/tree_name_of_conn_blue.png") != None:
+        lackey.doubleClick("files/images/tree_name_of_conn_blue.png")
+    else:
+        lackey.doubleClick("files/images/tree_name_of_conn.png")
+    time.sleep(5)    #waiting time to open connection
+    #actions after test:
     yield
     lackey.doubleClick("files/images/tree_name_of_open_conn.png")
     
-@pytest.fixture(scope='session', autouse=True)
-def create_connection():
-    lackey.App.focus("Red Expert")
-    lackey.rightClick("files/images/tree_name_of_conn.png")
-    lackey.click("files/images/tree_db_info.png")
-    lackey.click("files/images/init_db_browser.png")
-    lackey.click("files/images/text_input_db.png")
-    lackey.type("employee.fdb")
-    lackey.click("files/images/text_input_user.png")
-    lackey.type("sysdba")
-    lackey.click("files/images/text_input_password.png")
-    lackey.type("masterkey")
-    lackey.click("files/images/chb_store_pass.png")    
+# @pytest.fixture(scope='session', autouse=True)
+# def create_connection():
+#     pass   
