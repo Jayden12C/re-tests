@@ -10,7 +10,7 @@ def open_connection():
         lackey.doubleClick("files/images/tree_name_of_conn_blue.png")
     else:
         lackey.doubleClick("files/images/tree_name_of_conn.png")
-    time.sleep(5)    #waiting time to open connection
+    time.sleep(2)    #waiting time to open connection
     lackey.click("files/images/tree_name_of_open_conn_blue.png")
     #actions after test:
     yield
@@ -21,4 +21,5 @@ def open_connection():
     
 @pytest.fixture(scope='session', autouse=True)
 def create_connection():
-    lackey.SettingsMaster.MinSimilarity = 0.97  
+    lackey.App.focus("Red Expert")
+    lackey.SettingsMaster.MinSimilarity = 0.97
