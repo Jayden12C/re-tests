@@ -2,6 +2,9 @@ import pytest
 import lackey
 import time
 
+ADMIN_NAME = 'sysdba'
+ADMIN_PASSWORD = 'masterkey'
+
 @pytest.fixture()
 def open_connection():
     #actions befor test:
