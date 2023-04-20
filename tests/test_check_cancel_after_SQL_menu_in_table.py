@@ -5,7 +5,7 @@ def action():
     lackey.click("tree_plus.png")
     all_plus = lackey.findAll("tree_plus.png")
     lackey.click(list(all_plus)[2])
-    lackey.rightClick("/tree_table_name_EMPLOYEE.png")
+    lackey.rightClick("tree_table_name_EMPLOYEE.png")
     move_location = lackey.find("tree_SQL_menu.png").getTarget()
     return move_location
 
