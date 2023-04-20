@@ -15,7 +15,7 @@ def test_1(open_connection):
     lackey.rightClick("icon_users.png")
     lackey.click("tree_reload_menu.png")
     all_plus = lackey.findAll("tree_plus.png")
-    lackey.click(list(all_plus)[9])
+    lackey.click(list(all_plus)[8])
     lackey.rightClick("tree_user_name1.png")
     lackey.click("tree_edit_menu.png")
     lackey.click("tab_SQL.png")
