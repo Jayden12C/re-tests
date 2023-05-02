@@ -11,9 +11,9 @@ def test_1(open_connection):
     pyautogui.hotkey('ctrl', '/')
     time.sleep(2)
     lackey.type("z", lackey.Key.CTRL)
-    result1 = lackey.find("tab_query_editor_with_comment.png")
+    result1 = lackey.exists("tab_query_editor_with_comment.png")
     lackey.type("z", lackey.Key.CTRL)
-    result2 = lackey.find("tab_query_editor_with_text.png")
+    result2 = lackey.exists("tab_query_editor_with_text.png")
     lackey.type("a", lackey.Key.CTRL)
     lackey.type(lackey.Key.BACKSPACE)
     assert result1 != None

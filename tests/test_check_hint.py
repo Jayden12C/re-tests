@@ -7,7 +7,7 @@ def test_1(open_connection):
     mouse = lackey.Mouse()
     mouse.move(loc=move_location)
     time.sleep(1)
-    result = lackey.find("hint_disconnect.png")
+    result = lackey.exists("hint_disconnect.png")
     lackey.SettingsMaster.MinSimilarity = 0.97
     assert result != None
 
@@ -17,6 +17,6 @@ def test_2():
     mouse = lackey.Mouse()
     mouse.move(loc=move_location)
     time.sleep(1)
-    result = lackey.find("hint_connect.png")
+    result = lackey.exists("hint_connect.png")
     lackey.SettingsMaster.MinSimilarity = 0.97
     assert result != None

@@ -10,7 +10,7 @@ def test_1(open_connection):
     lackey.doubleClick("trigger_name.png")
     time.sleep(2)
     lackey.type("{ESC}")
-    result = lackey.find("trigger_name.png")
+    result = lackey.exists("trigger_name.png")
     lackey.rightClick("tab_table_EMPLOYEE_blue.png")
     lackey.click("bt_tab_close_all.png")
     assert result != None, "List of triggers is empty"

@@ -19,12 +19,12 @@ def test_1(open_connection):
     lackey.rightClick("tree_user_name1.png")
     lackey.click("tree_edit_menu.png")
     lackey.click("tab_SQL.png")
-    result1 = lackey.find("sql_text_user1.png")
+    result1 = lackey.exists("sql_text_user1.png")
     lackey.click("bt_OK.png")
     lackey.rightClick("tree_user_name2.png")
     lackey.click("tree_edit_menu.png")
     lackey.click("tab_SQL.png")
-    result2 = lackey.find("sql_text_user2.png")
+    result2 = lackey.exists("sql_text_user2.png")
     lackey.click("bt_OK.png")
 
     with fdb.connect(database='localhost:employee', user=ADMIN_NAME, password=ADMIN_PASSWORD) as con:
