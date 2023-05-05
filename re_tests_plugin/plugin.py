@@ -11,18 +11,12 @@ ADMIN_PASSWORD = 'masterkey'
 def open_connection():
     #actions befor test:
     lackey.App.focus("Red Expert")
-    if lackey.exists("tree_name_of_conn_blue.png") != None:
-        lackey.doubleClick("tree_name_of_conn_blue.png")
-    else:
-        lackey.doubleClick("tree_name_of_conn.png")
+    lackey.doubleClick("icon_conn.png")
     time.sleep(2)    #waiting time to open connection
-    lackey.click("tree_name_of_open_conn_blue.png")
+    lackey.click("icon_conn_open.png")
     #actions after test:
     yield
-    if lackey.exists("tree_name_of_open_conn.png") != None:
-        lackey.doubleClick("tree_name_of_open_conn.png")
-    else:
-        lackey.doubleClick("tree_name_of_open_conn_blue.png")
+    lackey.doubleClick("icon_conn_open.png")
     
 @pytest.fixture(scope='session', autouse=True)
 def create_connection():
