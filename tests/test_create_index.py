@@ -1,16 +1,19 @@
 import lackey
 from re_tests_plugin import *
 
+
 def create_index():
     lackey.click("tree_plus.png")
     lackey.rightClick("icon_indices.png")
     lackey.click("tree_create_menu.png")
+
 
 def test_check_default_active(open_connection):
     create_index()
     result = lackey.exists("chb_active.png")
     lackey.click("bt_cancel.png")
     assert result != None
+
 
 def test_check_order_fields(open_connection):
     create_index()
