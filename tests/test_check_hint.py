@@ -1,4 +1,5 @@
 import lackey
+import time
 from re_tests_plugin import *
 
 def test_1(open_connection):
