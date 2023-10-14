@@ -3,8 +3,12 @@ import lackey
 from re_tests_plugin import *
 import time
 
-
-def test_compare_db():
+#Тест сравнение сравнение двух таблиц
+def test_compare_db(open_connection):
+    lackey.click("bt_tools.png")
+    lackey.click("bt_profiler.png")
+    result1 = lackey.exists("icon_info_profiler.png")
+    lackey.click("bt_start.png")
     lackey.click("bt_tools.png")
     distance = -10
     mouse_controller = Mouse()
@@ -24,11 +28,16 @@ def test_compare_db():
     result5 = lackey.exists("info_output.png")
     lackey.click("tap_view.png")
     time.sleep(2)
+    lackey.click("icon_tab_profiler.png")
+    lackey.click("bt_stop.png")
+    result6 = lackey.exists("info_profiler_compare_db.png")
+    time.sleep(3)
     lackey.rightClick("icon_comp_db.png")
     lackey.click("bt_tab_close_all.png")
-    lackey.click("bags_info.png")
     time.sleep(3)
+    assert result1 != None
     assert result2 != None
     assert result3 != None
     assert result4 != None
     assert result5 != None
+    assert result6 != None
