@@ -10,7 +10,6 @@ def test_add_database():
     mouse = Mouse()
     direction = Mouse.WHEEL_DOWN
     steps = 9
-    mouse.wheel(direction, steps)
     lackey.click("bt_create_new_connection.png")
     time.sleep(2)
     lackey.click("icon_character.png")
@@ -39,10 +38,10 @@ def test_add_database():
 
 
 def test_add_tables():
-    if lackey.exists("icon_phone_test_clicked.png"):
-        lackey.click("icon_disconnected.png")
-    elif lackey.exists("icon_phone_test.png"):
+    if lackey.exists("icon_phone_test.png"):
         lackey.click("icon_phone_test.png")
+        lackey.click("icon_disconnected.png")
+    elif lackey.exists("icon_phone_test_clicked.png"):
         lackey.click("icon_disconnected.png")
     else:
         pass
