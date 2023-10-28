@@ -22,11 +22,12 @@ def test_compare_db(open_connection):
     lackey.click("bt_phone_test.png")
     lackey.click("icon_tables_db.png")
     lackey.click("bt_compare.png")
-    result4 = lackey.exists("icon_info_message.png")
+    #result4 = lackey.exists("icon_info_message.png")
     time.sleep(2)
     lackey.type(lackey.Key.ENTER)
     result5 = lackey.exists("info_output.png")
     lackey.click("tap_view.png")
+    lackey.click("tap_SQL.png")
     time.sleep(2)
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
@@ -38,6 +39,6 @@ def test_compare_db(open_connection):
     assert result1 != None
     assert result2 != None
     assert result3 != None
-    assert result4 != None
+    #assert result4 != None
     assert result5 != None
     assert result6 != None

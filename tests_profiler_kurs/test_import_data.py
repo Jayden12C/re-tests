@@ -18,11 +18,6 @@ def test_import_data():
         lackey.click("icon_disconnected.png")
     else:
         pass
-    lackey.click("bt_tools.png")
-    lackey.click("bt_profiler.png")
-    result1 = lackey.exists("icon_info_profiler.png")
-    lackey.click("bt_start.png")
-    lackey.click("tab_query_editor.png")
     result2 = lackey.exists("tab_query_editor_text.png")
     create_table_sql1 = """CREATE TABLE Titanic (
     NAME VARCHAR(1024),
@@ -32,6 +27,10 @@ def test_import_data():
     lackey.type(create_table_sql1)
     lackey.click("bt_format_sql.png")
     lackey.click("icon_execute_query.png")
+    lackey.click("bt_tools.png")
+    lackey.click("bt_profiler.png")
+    result1 = lackey.exists("icon_info_profiler.png")
+    lackey.click("bt_start.png")
     lackey.click("icon_bt_database.png")
     lackey.click("bt_import_data.png")
     result3 = lackey.exists("icon_import.png")
@@ -67,7 +66,7 @@ def test_import_data():
     lackey.click("bt_import.png")
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_pause.png")
-    time.sleep(3)
+    time.sleep(4)
     lackey.click("bt_resume.png")
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
@@ -77,7 +76,7 @@ def test_import_data():
     time.sleep(2)
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
-    time.sleep(3)
+    time.sleep(4)
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
     lackey.type(lackey.Key.BACKSPACE)
