@@ -30,6 +30,7 @@ def test_import_data():
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
     result1 = lackey.exists("icon_info_profiler.png")
+    lackey.click("bt_view_extended.png")
     lackey.click("bt_start.png")
     lackey.click("icon_bt_database.png")
     lackey.click("bt_import_data.png")

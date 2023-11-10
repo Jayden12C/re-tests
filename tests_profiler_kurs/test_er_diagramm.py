@@ -24,6 +24,7 @@ def test_er_diagramm(open_connection):
     lackey.click("bt_profiler.png")
     result1 = lackey.exists("icon_info_profiler.png")
     lackey.click("bt_start.png")
+    lackey.click("bt_view_extended.png")
     lackey.click("icon_bt_database.png")
     time.sleep(1)
     result2 = lackey.exists("icon_database_open.png")

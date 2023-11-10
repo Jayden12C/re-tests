@@ -65,6 +65,7 @@ def test_add_tables():
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
     result1 = lackey.exists("icon_info_profiler.png")
+    lackey.click("bt_view_extended.png")
     lackey.click("bt_start.png")
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
