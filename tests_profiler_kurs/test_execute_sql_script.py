@@ -28,7 +28,7 @@ WHERE EmployeeID = 1;
 
 DELETE FROM Employee WHERE EmployeeID = 2;
 """
-#Тест
+#Тест выполняет sql script из файла
 def test_execute_sql_script1():
     #Перед началом теста укажите в тесте и в Red Expert где будет папка test_script.txt
     current_os = platform.system()
@@ -71,7 +71,7 @@ def test_execute_sql_script1():
     lackey.type(lackey.Key.BACKSPACE)
     lackey.rightClick("icon_tab_profiler.png")
     lackey.click("bt_tab_close_all.png")
-    lackey.click("icon_connected.png")
+    lackey.doubleClick("icon_connected.png")
     assert result1 != None
     assert result2 != None
 
@@ -96,6 +96,7 @@ def test_execute_sql_script2():
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
     time.sleep(5)
+    lackey.click("bt_discard.png")
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
     lackey.type(lackey.Key.BACKSPACE)
@@ -105,5 +106,5 @@ def test_execute_sql_script2():
     lackey.type(lackey.Key.BACKSPACE)
     lackey.rightClick("icon_tab_profiler.png")
     lackey.click("bt_tab_close_all.png")
-    lackey.click("icon_connected.png")
+    lackey.doubleClick("icon_connected.png")
     assert result1 != None

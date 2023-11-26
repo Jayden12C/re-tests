@@ -1,4 +1,4 @@
-from lackey.InputEmulation import Mouse
+
 import lackey
 from re_tests_plugin import *
 import time
@@ -27,9 +27,8 @@ def test_execute_stored_obj1(open_connection):
     lackey.type(lackey.Key.ADD)
     lackey.type(lackey.Key.DOWN)
     lackey.type(lackey.Key.ADD)
-
     time.sleep(3)
-
+    lackey.click("bt_discard.png")
     lackey.rightClick("icon_info_profiler.png")
     lackey.click("bt_tab_close_all.png")
     assert result1 != None
@@ -61,6 +60,7 @@ def test_execute_stored_obj2(open_connection):
     lackey.click("bt_show.png")
     time.sleep(3)
     lackey.type(lackey.Key.ESC)
+    lackey.click("bt_discard.png")
     lackey.rightClick("icon_info_profiler.png")
     lackey.click("bt_tab_close_all.png")
     assert result1 != None

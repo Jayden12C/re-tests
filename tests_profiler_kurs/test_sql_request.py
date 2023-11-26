@@ -6,6 +6,7 @@ from re_tests_plugin import *
 def test_sql_request1(open_connection):
     lackey.click("tab_query_editor.png")
     sql_requst = "SELECT * FROM employee WHERE DEPT_NO = 621 or DEPT_NO = 623;"
+    time.sleep(1)
     lackey.click("tab_query_editor_text.png")
     lackey.type(sql_requst)
     lackey.click("bt_execute_profiler.png")
@@ -16,6 +17,7 @@ def test_sql_request1(open_connection):
     lackey.click("bt_info.png")
     time.sleep(3)
     lackey.type(lackey.Key.ESC)
+    lackey.click("bt_discard.png")
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
     lackey.type(lackey.Key.BACKSPACE)
@@ -38,6 +40,7 @@ def test_sql_request2(open_connection):
     lackey.click("bt_info.png")
     time.sleep(3)
     lackey.type(lackey.Key.ESC)
+    lackey.click("bt_discard.png")
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
     lackey.type(lackey.Key.BACKSPACE)

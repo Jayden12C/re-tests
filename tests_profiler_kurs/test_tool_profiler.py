@@ -1,5 +1,4 @@
 import time
-from lackey.InputEmulation import Mouse
 import lackey
 from re_tests_plugin import *
 

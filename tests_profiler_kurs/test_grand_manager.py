@@ -28,6 +28,7 @@ def test_grand_manager(open_connection):
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
     time.sleep(4)
+    lackey.click("bt_discard.png")
     lackey.rightClick("icon_info_profiler.png")
     lackey.click("bt_tab_close_all.png")
     assert result1 != None

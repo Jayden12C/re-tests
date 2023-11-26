@@ -25,6 +25,7 @@ def test(open_connection):
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_pause.png")
     time.sleep(3)
+
     lackey.click("bt_resume.png")
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
@@ -40,6 +41,7 @@ def test(open_connection):
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
     time.sleep(5)
+    lackey.click("bt_discard.png")
     lackey.rightClick("icon_info_profiler.png")
     lackey.click("bt_tab_close_all.png")
     assert result1 != None
