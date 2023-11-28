@@ -1,7 +1,7 @@
 import lackey
 from re_tests_plugin import *
 import time
-
+#Тестирование валидации таблиц с инструментом профайлер
 def test_validation(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")

@@ -3,6 +3,7 @@ from re_tests_plugin import *
 import time
 import os
 import platform
+from lackey.InputEmulation import Mouse
 
 text_file = """ 
 
@@ -28,7 +29,7 @@ WHERE EmployeeID = 1;
 
 DELETE FROM Employee WHERE EmployeeID = 2;
 """
-#Тест выполняет sql script из файла
+#Тест sql script из файла с инструментом профайлер
 def test_execute_sql_script1():
     #Перед началом теста укажите в тесте и в Red Expert где будет папка test_script.txt
     current_os = platform.system()
@@ -72,6 +73,11 @@ def test_execute_sql_script1():
     lackey.rightClick("icon_tab_profiler.png")
     lackey.click("bt_tab_close_all.png")
     lackey.doubleClick("icon_connected.png")
+    distance = 30
+    mouse_controller = Mouse()
+    current_position = mouse_controller.getPos()
+    new_position = current_position.offset(distance,0)
+    mouse_controller.move(new_position)
     assert result1 != None
     assert result2 != None
 

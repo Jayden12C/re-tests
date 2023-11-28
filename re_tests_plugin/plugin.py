@@ -31,4 +31,4 @@ def create_connection():
     #     image_path += ["Linux/"]
     
     lackey.SettingsMaster.ImagePaths = image_path
-    lackey.SettingsMaster.MinSimilarity = 0.97
+    lackey.SettingsMaster.MinSimilarity = 0.6

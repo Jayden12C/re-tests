@@ -16,7 +16,7 @@ def data_generator():
     lackey.type(lackey.Key.ENTER)
     assert result1 != None
 
-
+#Тестирование генератор тестовых данных с инструментом профайлер
 def test_data_generator():
     if lackey.exists("icon_phone_test.png"):
         lackey.click("icon_phone_test.png")

@@ -5,7 +5,7 @@ import time
 import os
 import platform
 
-#Тест добавление и тестирвание базы данных
+
 def test_add_database():
     mouse = Mouse()
     direction = Mouse.WHEEL_DOWN
@@ -33,8 +33,6 @@ def test_add_database():
     result3 = lackey.exists("icon_phone_test_clicked.png")
     assert result2 != None
     assert result3 != None
-
-
 
 
 def test_add_tables():

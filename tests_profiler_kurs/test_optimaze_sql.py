@@ -2,8 +2,8 @@ import lackey
 from re_tests_plugin import *
 import time
 
-#Тестирование выполнить сохраненный объект
-def test(open_connection):
+#Тестирование оптимизированного запроса
+def test_optimaze_sql(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
     result1 = lackey.exists("icon_info_profiler.png")

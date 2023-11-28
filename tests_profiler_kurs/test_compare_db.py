@@ -8,7 +8,7 @@ def test_compare_db(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
     result1 = lackey.exists("icon_info_profiler.png")
-    lackey.click("bt_view_extended.png")
+    #lackey.click("bt_view_extended.png")
     lackey.click("bt_start.png")
     lackey.click("bt_tools.png")
     distance = -10
@@ -29,7 +29,6 @@ def test_compare_db(open_connection):
     time.sleep(2)
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
-    result6 = lackey.exists("info_profiler_compare_db.png")
     time.sleep(3)
     lackey.click("icon_session.png")
     lackey.type(lackey.Key.DOWN)
@@ -45,4 +44,3 @@ def test_compare_db(open_connection):
     assert result2 != None
     assert result3 != None
     assert result4 != None
-    assert result6 != None

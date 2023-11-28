@@ -1,7 +1,7 @@
 import lackey
 from re_tests_plugin import *
 import time
-
+#Тестирование открытие дерева объектов базы данных с инструментом ппррфайлер
 def test_domain(open_connection):
     lackey.click("tree_plus.png")
     lackey.click("bt_tools.png")
