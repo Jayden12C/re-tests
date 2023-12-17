@@ -1,4 +1,3 @@
-
 import lackey
 from re_tests_plugin import *
 import time
@@ -15,6 +14,7 @@ def data_generator():
     lackey.click("bt_start.png")
     lackey.type(lackey.Key.ENTER)
     assert result1 != None
+
 
 #Тестирование генератор тестовых данных с инструментом профайлер
 def test_data_generator():

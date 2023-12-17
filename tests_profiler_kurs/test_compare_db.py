@@ -3,7 +3,7 @@ import lackey
 from re_tests_plugin import *
 import time
 
-#Тест сравнение сравнение двух таблиц
+#Тест сравнение таблиц с инструментом профайлер
 def test_compare_db(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")

@@ -110,7 +110,7 @@ VALUES (1, 'Tele2', 111);""")
     assert result6 != None
 
 
-def test_remove_connected_phone():
+def test_remove_connected_test_kurs():
     time.sleep(2)
     if lackey.exists("icon_phone_test_clicked.png"):
         lackey.click("bt_remove.png")

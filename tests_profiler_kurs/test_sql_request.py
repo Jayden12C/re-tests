@@ -2,7 +2,7 @@ import time
 import lackey
 from re_tests_plugin import *
 
-#Тестирование sql запросов с инструментом профайлера
+#Тестирование кнопки выполнение sql запросов в профайлере
 def test_sql_request1(open_connection):
     lackey.click("tab_query_editor.png")
     sql_requst = "SELECT * FROM employee WHERE DEPT_NO = 621 or DEPT_NO = 623;"

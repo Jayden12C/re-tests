@@ -2,7 +2,7 @@ from lackey.InputEmulation import Mouse
 import lackey
 from re_tests_plugin import *
 import time
-import os
+
 
 
 def move_mouse(distance):
@@ -18,7 +18,7 @@ def move_mouse_to_target(target_image):
     mouse = lackey.Mouse()
     mouse.move(loc=move_location)
 
-#Тест построение er диаграммы
+#Тест построение er-диаграммы с инструментом профайлер
 def test_er_diagramm(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")

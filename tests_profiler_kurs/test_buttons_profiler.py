@@ -2,7 +2,8 @@ import lackey
 from re_tests_plugin import *
 import time
 
-#Тестирование оптимизированного запроса
+
+#Тестирование оптимизированного запроса с инструментом профайлер
 def test_optimaze_sql(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
@@ -25,7 +26,6 @@ def test_optimaze_sql(open_connection):
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_pause.png")
     time.sleep(3)
-
     lackey.click("bt_resume.png")
     lackey.click("tab_query_editor.png")
     lackey.type("a", lackey.Key.CTRL)
@@ -38,6 +38,8 @@ def test_optimaze_sql(open_connection):
     lackey.click("bt_format_sql.png")
     lackey.click("icon_execute_query.png")
     time.sleep(2)
+    lackey.type("a", lackey.Key.CTRL)
+    lackey.type(lackey.Key.BACKSPACE)
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
     time.sleep(5)

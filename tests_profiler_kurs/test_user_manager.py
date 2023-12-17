@@ -1,8 +1,7 @@
-
 import lackey
 from re_tests_plugin import *
 import time
-#Тестирование Менеджер пользователей в профайлере
+#Тестирование Менеджер пользователей с инструментом профайлере
 def test_user_manager(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")

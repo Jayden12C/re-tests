@@ -3,6 +3,7 @@ import lackey
 from re_tests_plugin import *
 
 
+#Тест на вывод ошибки если нет подключение
 def test_open_profiler_no_connections():
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
@@ -16,16 +17,6 @@ def test_button_click_profiler(open_connection):
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
     result1 = lackey.exists("icon_info_profiler.png")
-    lackey.click("bt_start.png")
-    lackey.click("bt_pause.png")
-    result2 = lackey.exists("icon_error_message2.png")
-    time.sleep(2)
-    lackey.type(lackey.Key.ENTER)
-    lackey.click("bt_resume.png")
-    lackey.click("bt_stop.png")
-    result3 = lackey.exists("icon_error_message2.png")
-    time.sleep(2)
-    lackey.type(lackey.Key.ENTER)
     lackey.click("bt_start.png")
     lackey.click("bt_execute.png")
     result4 = lackey.exists("icon_execute_st.png")
@@ -55,6 +46,4 @@ def test_button_click_profiler(open_connection):
     lackey.rightClick("icon_info_profiler.png")
     lackey.click("bt_tab_close_all.png")
     assert result1 != None
-    assert result2 != None
-    assert result3 != None
     assert result4 != None

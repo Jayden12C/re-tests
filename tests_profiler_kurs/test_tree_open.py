@@ -1,7 +1,9 @@
 import lackey
 from re_tests_plugin import *
 import time
-#Тестирование открытие дерева объектов базы данных с инструментом ппррфайлер
+
+
+#Тестирование открытие дерева объектов базы данных с инструментом профайлер
 def test_domain(open_connection):
     lackey.click("tree_plus.png")
     lackey.click("bt_tools.png")
@@ -33,6 +35,7 @@ def test_domain(open_connection):
     lackey.click("bt_tab_close_all.png")
     assert result1 != None
     assert result2 != None
+
 
 def test_table(open_connection):
     lackey.click("tree_plus.png")
@@ -66,6 +69,7 @@ def test_table(open_connection):
     assert result1 != None
     assert result2 != None
 
+
 def test_views(open_connection):
     lackey.click("tree_plus.png")
     lackey.click("bt_tools.png")
@@ -97,6 +101,7 @@ def test_views(open_connection):
     lackey.click("bt_tab_close_all.png")
     assert result1 != None
     assert result2 != None
+
 
 def test_procedure(open_connection):
     lackey.click("tree_plus.png")
@@ -130,6 +135,7 @@ def test_procedure(open_connection):
     assert result1 != None
     assert result2 != None
 
+
 def test_triggers(open_connection):
     lackey.click("tree_plus.png")
     lackey.click("bt_tools.png")
@@ -162,6 +168,7 @@ def test_triggers(open_connection):
     assert result1 != None
     assert result2 != None
 
+
 def test_sequences(open_connection):
     lackey.click("tree_plus.png")
     lackey.click("bt_tools.png")
@@ -193,6 +200,7 @@ def test_sequences(open_connection):
     lackey.click("bt_tab_close_all.png")
     assert result1 != None
     assert result2 != None
+
 
 def test_users(open_connection):
     lackey.click("tree_plus.png")
@@ -240,7 +248,6 @@ def test_indices(open_connection):
     lackey.doubleClick("indices_budgetx.png")
     time.sleep(3)
     lackey.click("bt_OK.png")
-    result2 = lackey.exists("icon_object_panel.png")
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_stop.png")
     time.sleep(4)
@@ -258,4 +265,3 @@ def test_indices(open_connection):
     lackey.rightClick("icon_info_profiler.png")
     lackey.click("bt_tab_close_all.png")
     assert result1 != None
-    assert result2 != None

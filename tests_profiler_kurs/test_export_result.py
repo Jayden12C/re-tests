@@ -4,7 +4,7 @@ import time
 import os
 import platform
 
-#Тест экспортирование результата
+#Тест экспорт результата в файл с инструментом профайлер
 def test_export_result(open_connection):
     #Перед началом теста укажите в тесте и Red Expert где будет папка test.txt
     current_os = platform.system()

@@ -1,7 +1,6 @@
 import lackey
 from re_tests_plugin import *
 import time
-import os
 import platform
 from lackey.InputEmulation import Mouse
 
@@ -29,7 +28,7 @@ WHERE EmployeeID = 1;
 
 DELETE FROM Employee WHERE EmployeeID = 2;
 """
-#Тест sql script из файла с инструментом профайлер
+#Тест выполнение sql script из файла с инструментом профайлер
 def test_execute_sql_script1():
     #Перед началом теста укажите в тесте и в Red Expert где будет папка test_script.txt
     current_os = platform.system()

@@ -10,6 +10,7 @@ def move_mouse(distance):
     new_position = current_position.offset(0, distance)
     mouse_controller.move(new_position)
 
+#Тест импорта данных из .csv файла с инструментом профайлер
 def test_import_data():
     if lackey.exists("icon_phone_test.png"):
         lackey.click("icon_phone_test.png")
@@ -30,7 +31,7 @@ def test_import_data():
     lackey.click("bt_tools.png")
     lackey.click("bt_profiler.png")
     result1 = lackey.exists("icon_info_profiler.png")
-    lackey.click("bt_view_extended.png")
+    #lackey.click("bt_view_extended.png")
     lackey.click("bt_start.png")
     lackey.click("icon_bt_database.png")
     lackey.click("bt_import_data.png")
@@ -48,7 +49,8 @@ def test_import_data():
     time.sleep(2)
     mouse = Mouse()
     direction = Mouse.WHEEL_DOWN
-    steps = 1
+    steps = 2
+    steps2 = 1
     mouse.wheel(direction, steps)
     lackey.click("bt_TITANIC.png")
     lackey.click("icon_file_mapping.png")
@@ -71,8 +73,10 @@ def test_import_data():
     time.sleep(1)
     lackey.click("source_column.png")
     move_mouse(15)
-    mouse.wheel(direction, steps)
+    mouse.wheel(direction, steps2)
+    time.sleep(1)
     lackey.click("icon_ticket.png")
+    time.sleep(1)
     lackey.click("bt_import.png")
     lackey.click("icon_tab_profiler.png")
     lackey.click("bt_pause.png")
@@ -111,3 +115,4 @@ def test_import_data():
     assert result1 != None
     assert result2 != None
     assert result3 != None
+
